@@ -1,0 +1,28 @@
+# Secrets — never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Model weights (downloaded automatically or trained separately)
+models/*.pt
+models/*_openvino_model/
+!models/.gitkeep
+
+# Local runtime data (decision log, snapshots)
+data/roadmind.db
+data/thumbs/
+
+# Junction clips ARE allowed in the repo so the live link has video,
+# but keep each clip under ~40 MB (see README: "Compress a clip").
+
+# Ultralytics / editor files
+runs/
+.vscode/
+.idea/
+.DS_Store
